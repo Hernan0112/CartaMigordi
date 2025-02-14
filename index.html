@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Carta para Ti 💌</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #5a2a2a; /* Cambiado a un color oscuro */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Sombra blanca para contraste */
+            font-size: 2.5rem;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+        .emoji {
+            font-size: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            color: #d6336c;
+        }
+        .emoji:hover {
+            transform: scale(1.1);
+        }
+        #carta {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #d6336c;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            text-align: left;
+        }
+        #carta h2 {
+            color: #d6336c;
+        }
+        #carta p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+        #error {
+            color: red;
+            font-size: 18px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Para Ti, Mi Amor 💖</h1>
+        <!-- Emoji de carta -->
+        <div id="emojiCarta" class="emoji" onclick="mostrarCarta()">💌</div>
+        <p id="error">⚠️ Algo salió mal. Intenta nuevamente.</p>
+        
+        <!-- Carta oculta -->
+        <div id="carta">
+            <h2>Mi Querida Persona Especial 💌</h2>
+            <p>
+                A pesar de que esta fecha no se celebra en Colombia, no me gusta que andes triste por no sentirte especial. Mis días contigo son especiales. Gracias por ser mi compañera, mi amiga y la persona que hace que mi mundo sea mucho mejor.
+            </p>
+            <p>
+                No necesito un día para recordarte lo increíble que eres, pero hoy quiero aprovechar para agradecerte por todo lo que compartimos, por tu amor, por tu paciencia, y por ser tú.
+            </p>
+            <p>
+                Cada momento a tu lado me enseña algo nuevo y me hace sentir afortunado de poder caminar juntos. Te amo muchísimo, y perdóname por los momentos en que te sientes mal por mi culpa. Espero que este día te recuerde lo importante que eres para mí, no solo hoy, sino siempre.
+            </p>
+            <p>
+                Feliz San Valentín, mi amor. 💕
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarCarta() {
+            // Muestra la carta y oculta el emoji
+            document.getElementById("carta").style.display = "block";
+            document.getElementById("emojiCarta").style.display = "none";
+        }
+
+        function mostrarError() {
+            document.getElementById("error").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
